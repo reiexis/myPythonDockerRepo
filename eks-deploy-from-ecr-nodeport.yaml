@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,10 +14,10 @@ spec:
         app: python-app
     spec:
       containers:
-      - name: my-python-app
-        image: 871902412398.dkr.ecr.us-east-2.amazonaws.com/my-docker-repo:latest
-        imagePullPolicy: Always
-# service type loadbalancer       
+        - name: my-python-app
+          image: 871902412398.dkr.ecr.us-east-2.amazonaws.com/my-docker-repo:latest
+          imagePullPolicy: Always
+
 ---
 apiVersion: v1
 kind: Service
